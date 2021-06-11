@@ -2,6 +2,28 @@ $(".psucampus_25livespudembed").ready(function(){
 if ($('.psucampus_25livespudembed').length > 0) {
   var spudScriptUrl = "https://25livepub.collegenet.com/scripts/spuds.js";
   $.getScript(spudScriptUrl).done(function(){
+	  
+	// Adaptive 25live spud
+	$(".psucampus_25livespudembed[spudtype=default]").once('eachAdaptive25LiveSpud').each(function(){
+	  var spudId = $(this).attr('spudid');
+	  $Trumba.addSpud({
+		webName: spudId,
+		spudType : "main",
+		spudId : "spud_" + spudId + "_month",
+		url : { template : "month" },
+	  });
+	  $Trumba.addSpud({
+		webName: spudId,
+		spudType : "main",
+		spudId : "spud_" + spudId + "_table",
+		url : { template : "list" },
+	  });
+	  showHideTrumba(spudId);
+	  $(window).resize(function(){
+		showHideTrumba(spudId);
+	  });
+	});
+
 
 	// Only do this for "News Style"
 	$(".psucampus_25livespudembed[spudtype=newsstyle]").each(function(){

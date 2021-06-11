@@ -61,7 +61,8 @@ if ($('.psucampus_25livespudembed').length > 0) {
 			  var desc = $(this).data('description');
 			  var location = $(this).data('location');
 			  $(".modal-content").append(
-				desc + '<br>' + location
+				'<p><h3>Description:</h3>' + desc + '</p>' +
+				'<p><h3>Location:</h3>' + location + '</p>'
 			  );
 			  modal.style.display = "block";
 		  });

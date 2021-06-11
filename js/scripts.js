@@ -2,28 +2,6 @@ $(".psucampus_25livespudembed").ready(function(){
 if ($('.psucampus_25livespudembed').length > 0) {
   var spudScriptUrl = "https://25livepub.collegenet.com/scripts/spuds.js";
   $.getScript(spudScriptUrl).done(function(){
-	  
-	// Adaptive 25live spud
-	$(".psucampus_25livespudembed[spudtype=default]").each(function(){
-	  var spudId = $(this).attr('spudid');
-	  $Trumba.addSpud({
-		webName: spudId,
-		spudType : "main",
-		spudId : "spud_" + spudId + "_month",
-		url : { template : "month" },
-	  });
-	  $Trumba.addSpud({
-		webName: spudId,
-		spudType : "main",
-		spudId : "spud_" + spudId + "_table",
-		url : { template : "list" },
-	  });
-	  showHideTrumba(spudId);
-	  $(window).resize(function(){
-		showHideTrumba(spudId);
-	  });
-	});
-
 
 	// Only do this for "News Style"
 	$(".psucampus_25livespudembed[spudtype=newsstyle]").each(function(){
@@ -36,7 +14,7 @@ if ($('.psucampus_25livespudembed').length > 0) {
 		  arrEventId.push(rowData.eventID);
 		  var startDate = new Date(rowData.startDateTime);
 		  var endDate = new Date(rowData.endDateTime);
-		  $(".psucampus_25livespudembed[spudid='" + spudId + "'][spudtype=newsstyle]:has(div#twentyFiveliveModal_" + uniqueId + ")").append('\
+		  $(".psucampus_25livespudembed[spudid='" + spudId + "'][spudtype=newsstyle]").append('\
 			<div id="25live-eventid-' + rowData.eventID + '" class="psu-node--teaser node-type--event clearfix" style="background-color: transparent !important;">\
 			  <div class="calendar-icon-container">\
 				<div class="calendar-icon">\

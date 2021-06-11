@@ -1,7 +1,5 @@
 $(".psucampus_25livespudembed").ready(function(){
-	console.log('s');
 if ($('.psucampus_25livespudembed').length > 0) {
-	console.log('s');
   var spudScriptUrl = "https://25livepub.collegenet.com/scripts/spuds.js";
   $.getScript(spudScriptUrl).done(function(){
 
@@ -71,21 +69,6 @@ if ($(event.target).hasClass("twentyFiveliveModal")) {
   modal.css("display", "none");
 }
 });
-
-/*
-* Toggles 25live spud between month/list view.  This is only for ADAPTIVE mode.
-*/
-function showHideTrumba(spudid) {
-var spudwidth = jQuery(".psucampus_25livespudembed[spudid=" + spudid + "]").outerWidth();
-if ( spudwidth > 500) {
-  jQuery("#spud_" + spudid + "_month").show();
-  jQuery("#spud_" + spudid + "_table").hide();
-}
-else{
-  jQuery("#spud_" + spudid + "_month").hide();
-  jQuery("#spud_" + spudid + "_table").show();
-}
-}
 
 /*
 * Gets 25Live Event ID from the query string to display as a SPUD

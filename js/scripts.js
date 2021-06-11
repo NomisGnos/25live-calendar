@@ -43,7 +43,9 @@ if ($('.psucampus_25livespudembed').length > 0) {
 			  <div class="content teaser-content">\
 				<h2 class="node-title"> \
 					<a id="eventLink-for-eventid-' + rowData.eventID + '" href="#eventid-' + rowData.eventID + '" \
-					data-description="">' + rowData.title + '</a></h2>\
+					data-description="' + rowData.description + '" \
+					data-location="' + rowData.location + '" \
+					>' + rowData.title + '</a></h2>\
 				<div>' + 
 				  startDate.toLocaleDateString("en-EN", { weekday: "short" })                                 + ', ' + 
 				  startDate.toLocaleDateString("en-EN", { month: "short" })                                   + ' ' + 

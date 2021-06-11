@@ -15,7 +15,7 @@ if ($('.psucampus_25livespudembed').length > 0) {
 		  var startDate = new Date(rowData.startDateTime);
 		  var endDate = new Date(rowData.endDateTime);
 		  $(".psucampus_25livespudembed[spudid='" + spudId + "'][spudtype=newsstyle]").append('\
-			<div id="25live-eventid-' + rowData.eventID + '" class="25live-eventItem" style="background-color: transparent !important;">\
+			<div id="25live-eventid-' + rowData.eventID + '" class="eventItem" style="background-color: transparent !important;">\
 			  <div class="calendar-icon-container">\
 				<div class="calendar-icon">\
 				  <div class="month">' + startDate.toLocaleDateString("en-EN", { month: "short" }) + '</div>\

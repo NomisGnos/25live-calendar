@@ -60,7 +60,7 @@ if ($('.psucampus_25livespudembed').length > 0) {
 		  $('#eventLink-for-eventid-' + rowData.eventID).click(function(){
 			  var desc = $(this).data('description');
 			  var location = $(this).data('location');
-			  $(".modal-content").append(
+			  $(".modal-content").html(
 				'<p><h3>Description:</h3>' + desc + '</p>' +
 				'<p><h3>Location:</h3>' + location + '</p>'
 			  );

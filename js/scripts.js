@@ -4,7 +4,7 @@ if ($('.psucampus_25livespudembed').length > 0) {
   $.getScript(spudScriptUrl).done(function(){
 	  
 	// Adaptive 25live spud
-	$(".psucampus_25livespudembed[spudtype=default]").once('eachAdaptive25LiveSpud').each(function(){
+	$(".psucampus_25livespudembed[spudtype=default]").each(function(){
 	  var spudId = $(this).attr('spudid');
 	  $Trumba.addSpud({
 		webName: spudId,
